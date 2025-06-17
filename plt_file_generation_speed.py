@@ -59,7 +59,7 @@ def plot_file_generation_speed(
     timestamps = get_file_timestamps(folder, extension, timestamp_type)
     batches = segment_file_batches(timestamps, gap_factor=gap_factor)
 
-    colors = plt.cm.get_cmap("tab10", len(batches))
+    colors = plt.get_cmap("tab10", len(batches))
     plt.figure(figsize=(10, 5))
 
     for idx, batch in enumerate(batches):
